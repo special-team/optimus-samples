@@ -1,0 +1,23 @@
+/** {*/
+/*font-family: "Microsoft YaHei", sans-serif;*/
+/*}*/
+body, th, td, button, input, select, textarea {
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, tahoma, arial, "WenQuanYi Micro Hei", Verdana, sans-serif;
+    /*font-size: 12px;*/
+    /*color: #333;*/
+}
+
+* {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.select2-container--bootstrap .select2-results__group {
+    color: #ff6707;
+    display: block;
+    padding: 6px 12px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    white-space: nowrap;
+}

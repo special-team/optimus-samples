@@ -1,0 +1,1 @@
+entity-packages: org.ufox.rubik.optimus.archer.business.customer.entity

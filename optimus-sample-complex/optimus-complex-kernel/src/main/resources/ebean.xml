@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ebean xmlns="http://ebean-orm.github.io/xml/ns/ebean">
+    <entity class="org.ufox.rubik.optimus.archer.business.customer.entity.Customer">
+        <raw-sql name="select-customer">
+            <column-mapping column="id_" property="id"/>
+            <column-mapping column="name_" property="name"/>
+            <column-mapping column="mobile_" property="mobile"/>
+            <column-mapping column="mail_" property="mail"/>
+            <column-mapping column="address_" property="address"/>
+            <column-mapping column="state_" property="state"/>
+            <query>
+                SELECT id_, name_, mobile_, mail_, address_, state_
+                FROM e_business_customer
+            </query>
+        </raw-sql>
+    </entity>
+</ebean>

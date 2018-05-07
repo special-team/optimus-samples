@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title th:text="#{appname}">dashboard</title>
+    <link rel="stylesheet" th:href="@{/static/vuetify/vuetify-v1.0.17.min.css}"/>
+    <link rel="stylesheet" th:href="@{/static/vuetify/vuetify-font-icon-roboto.css}"/>
+</head>
+<body>
+<div id="app">
+    <v-app id="inspire">
+        <v-navigation-drawer app fixed temporary v-model="drawer">
+            <v-list dense>
+                <v-list-tile href="#">
+                    <v-list-tile-action>
+                        <v-icon>contacts</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title>测试一下</v-list-tile-title>
+                    </v-list-tile-content>
+                </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
+        <v-toolbar app fixed dark color="blue darken-3" height="50">
+            <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            <v-toolbar-title>OPTIMUS</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn icon>
+                <v-icon>apps</v-icon>
+            </v-btn>
+            <v-btn icon>
+                <v-icon>notifications</v-icon>
+            </v-btn>
+            <v-btn icon>
+                <v-icon>input</v-icon>
+            </v-btn>
+            <v-btn icon large>
+                <v-avatar size="32px" tile>
+                    <img src="#" th:src="@{/static/vuetify/logo.svg}" alt="optimus">
+                </v-avatar>
+            </v-btn>
+        </v-toolbar>
+
+
+        <v-content>
+            <v-btn outline
+                color="blue-grey"
+                class="white--text"
+            >
+                Upload
+                <v-icon right dark>cloud_upload</v-icon>
+            </v-btn>
+            <v-container fluid>
+                <v-layout>
+                    <v-flex>
+                        <table class="datatable table elevation-1">
+                            <thead>
+                            <tr>
+                                <th align="left">c1</th>
+                                <th align="left">c2</th>
+                                <th align="left">c3</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </v-flex>
+                </v-layout>
+            </v-container>
+        </v-content>
+    </v-app>
+</div>
+<script th:src="@{/static/vuetify/vue.min.js}"></script>
+<script th:src="@{/static/vuetify/vuetify-v1.0.17.min.js}"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            drawer: null,
+            items: [
+                {text: 'Dashboard', disabled: false},
+                {text: 'Link 1', disabled: false},
+                {text: 'Link 2', disabled: true}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

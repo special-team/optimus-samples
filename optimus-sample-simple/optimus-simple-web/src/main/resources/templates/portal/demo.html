@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title th:text="#{appname}">dashboard</title>
+    <link rel="stylesheet" th:href="@{/static/plugins/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container">
+    <div class="alert alert-info" th:text="#{demo}"> DEMO</div>
+    <p th:text="${#authentication}">AUTHENTICATION</p>
+    <p>
+        <a class="btn btn-primary" href="?locale=zh">chinese</a>
+        <a class="btn btn-success" href="?locale=en">english</a>
+        <a class="btn btn-warning" href="?locale=ko">korean</a>
+    </p>
+</div>
+<script th:src="@{/static/plugins/jquery/jquery-3.3.1.slim.min.js}"></script>
+<script th:src="@{/static/plugins/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
