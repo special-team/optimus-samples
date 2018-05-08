@@ -8,8 +8,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>optimus-sample-complex</module>
-        <module>optimus-sample-simple</module>
+        <module>optimus-sample-kernel</module>
+        <module>optimus-sample-module-platform</module>
+        <module>optimus-sample-web-complex</module>
+        <module>optimus-sample-web-simple</module>
     </modules>
 
 </project>
